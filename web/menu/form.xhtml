@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns="http://www.w3.org/1999/xhtml">
+    <!-- Form de Menu -->
+    <h2><h:outputText value="Opciones de Menú"/></h2>
+
+    <h4> <h:messages globalOnly="false" style="color: red" /> </h4>
+
+    <pre>
+        <h:outputLabel value="ID:         " for="id"/>
+        <h:inputText id="id" value="#{menuController.selected.id}" title="Id" disabled="true"/><br/>
+
+        <h:outputLabel value="Nombre:     " for="nombre"/>
+        <h:inputText id="nombre" value="#{menuController.selected.nombre}" /><br/>
+
+        <h:outputLabel value="Imagen:     " for="imagen"/>
+        <h:inputText id="imagen" value="#{menuController.selected.imagen}" title="Imagen"/><br/>
+
+        <h:outputLabel value="URL:        " for="url"/>
+        <h:inputText id="url" value="#{menuController.selected.url}" title="Url"/><br/>
+
+        <h:outputLabel value="Action:     " for="action"/>
+        <h:inputText id="action" value="#{menuController.selected.action}" title="Action"/><br/>
+
+        <h:outputLabel value="Raiz:       " for="raiz"/>
+        <h:inputText id="raiz" value="#{menuController.selected.raiz}" title="Raiz">
+            <f:validateLongRange minimum="0" maximum="10"/>
+        </h:inputText><br/>
+
+        <h:outputLabel value="Orden:      " for="orden"/>
+        <h:inputText id="orden" value="#{menuController.selected.orden}" title="Orden">
+            <f:validateLongRange minimum="0" maximum="10"/>
+        </h:inputText><br/>
+
+        <h:outputLabel value="Creado:     " for="created"/>
+        <h:inputText id="created" value="#{menuController.selected.created}" title="Creado" disabled="true">
+            <f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss" timeZone="GMT-4"/>
+        </h:inputText><br/>
+    
+        <h:outputLabel value="Modificado: " for="updated"/>
+        <h:inputText id="updated" value="#{menuController.selected.updated}" title="Actualizado" disabled="true">
+            <f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss" timeZone="GMT-4"/>
+        </h:inputText><br/>
+    </pre>
+
+</ui:composition>

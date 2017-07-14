@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./templates/base.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns="http://www.w3.org/1999/xhtml">
+
+    <ui:define name="content">
+        <h:form>
+            <h2> <h:outputText value="Opciones de Menú y Acceso a Usuarios"/> </h2>
+
+            <table>
+                <tr>
+                    <td> <h:commandLink action="#{tipousuarioController.index()}"> <h:graphicImage library="images" name="tipos.png" /> </h:commandLink> </td>
+                    <td></td>
+                    <td> <h:commandLink action="#{usuarioController.index()}"> <h:graphicImage library="images" name="usuario.png" /> </h:commandLink> </td>
+                    <td></td>
+                    <td> <h:commandLink action="#{menuController.index()}"> <h:graphicImage library="images" name="menu.png" /> </h:commandLink> </td>
+                    <td></td>
+                    <td> <h:commandLink action="#{menuTipousuarioController.index()}"> <h:graphicImage library="images" name="control.png" /> </h:commandLink> </td>
+                </tr>
+                <tr>
+                    <th> <h:outputText value="Tipos de Usuario"/> </th>
+                    <th></th>
+                    <th> <h:outputText value="Usuarios del Sistema"/> </th>
+                    <th></th>
+                    <th> <h:outputText value="Opciones de Menú"/> </th>
+                    <th></th>
+                    <th> <h:outputText value="Control de Accesos"/> </th>
+                </tr>
+            </table>
+
+            <p align="center">
+                <h:outputText value="Cree su propio menú, agrege usuarios al sistema y además controle el acceso de los usuarios."/> <br /> <br />
+                <h:outputText value="Los botones de la barra superior son para el mantenimiento de la aplicación."/> <br /> <br />
+                <h:outputText value="Saludos!!"/>
+            </p>
+        </h:form>
+        <h:outputText value="Hugo Daniel Ramirez" />
+    </ui:define>
+
+</ui:composition>
